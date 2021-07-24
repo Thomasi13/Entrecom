@@ -40,7 +40,7 @@ $('section').each(function(){
 
 // BLOCK IMAGE INTRO
 var tween = TweenMax.staggerFromTo("#block-image-intro", 1, 
-    {backgroundSize: "auto 160%"}, 
+    {backgroundSize: "auto 130%"}, 
     {backgroundSize:"auto 100%"});
 
 var scene = new ScrollMagic.Scene({
