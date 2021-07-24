@@ -53,6 +53,7 @@ var scene = new ScrollMagic.Scene({
 .setTween(tween)
 .addTo(controller)
 
+
 // Block metier resize
 var tween = TweenMax.fromTo("#block-title--metier", 1,
 {width: "50vw"},
@@ -67,13 +68,6 @@ triggerHook:0.5
 .addTo(controller);
 
 // Block metier sticky
-var scene = new ScrollMagic.Scene({
-triggerElement: "#block-title--metier",
-duration: 300,
-
-})
-.setPin("#block-title--metier")
-.addTo(controller);
 
 /******************
      VERTICALE
