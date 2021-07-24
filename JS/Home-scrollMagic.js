@@ -10,7 +10,6 @@ function getwindowWidth(slow){
 	var windowWidth = window.innerWidth
 	return (windowWidth * slow)
 }
-
 // ADD CLASS ACTIVE TO SECTION
 $('section').each(function(){
 	var sectionWidth = $(this).innerWidth()
