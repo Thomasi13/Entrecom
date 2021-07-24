@@ -13,24 +13,24 @@ function getwindowWidth(slow){
 // ADD CLASS ACTIVE TO SECTION
 $('section').each(function(){
 	var sectionWidth = $(this).innerWidth()
-    var href = $(this).attr('id')
-    var animEl = "[anchor="+href+"]"
-    var scrollBar = "[anchor="+href+"] .scrollbar"
+    	var href = $(this).attr('id')
+    	var animEl = "[anchor="+href+"]"
+   	var scrollBar = "[anchor="+href+"] .scrollbar"
     
 
-    var tween = TweenMax.staggerFromTo(scrollBar, 1, 
-    {scaleX: 0 }, {scaleX: 1});
+    	var tween = TweenMax.staggerFromTo(scrollBar, 1, 
+    	{scaleX: 0 }, {scaleX: 1});
 	
-    var scene = new ScrollMagic.Scene({
+    	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    	triggerHook : 0.55,
-        duration: sectionWidth,
-    	reverse : true,
-    	offset:0
+    		triggerHook : 0.55,
+       		duration: sectionWidth,
+    		reverse : true,
+    		offset:0
   	}) 
-    .setClassToggle(animEl, "active")
-    .setTween(tween)
-    .addTo(controller)
+    	.setClassToggle(animEl, "active")
+    	.setTween(tween)
+    	.addTo(controller)
 })
 
 /******************
@@ -55,13 +55,13 @@ var scene = new ScrollMagic.Scene({
 
 // Block metier resize
 var tween = TweenMax.fromTo("#block-title--metier", 1,
-{width: "50vw"},
-{width: "10vw", ease: Circ.easeInOut}
+	{width: "50vw"},
+	{width: "10vw", ease: Circ.easeInOut}
 );
 var scene = new ScrollMagic.Scene({
-triggerElement: "#block-title--metier", 
-duration: 200, 
-triggerHook:0.5
+	triggerElement: "#block-title--metier", 
+	duration: 200, 
+	triggerHook:0.5
 })
 .setTween(tween)
 .addTo(controller);
@@ -90,13 +90,13 @@ var scene = new ScrollMagic.Scene({
 // BLOC IMG PROJET
 
 $('.project-item').each(function(){     
-		var scene = new ScrollMagic.Scene({
+	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    	triggerHook : 0.8,
-    	reverse : true,
-    	offset:0
+    		triggerHook : 0.8,
+    		reverse : true,
+    		offset:0
   	}) 
-    .setClassToggle(this, "active") 
+    	.setClassToggle(this, "active") 
 	.addTo(controller)
 })
 
@@ -120,14 +120,14 @@ var scene = new ScrollMagic.Scene({
 
 
 $('.actu-item').each(function(){     
-		var scene = new ScrollMagic.Scene({
+	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    	triggerHook : 0.8,
-    	reverse : true,
-    	offset:0
+    		triggerHook : 0.8,
+    		reverse : true,
+    		offset:0
   	}) 
-    .setClassToggle(this, "active") 
-		.addTo(controller)
+    	.setClassToggle(this, "active") 
+	.addTo(controller)
 })
 
 
@@ -136,45 +136,44 @@ $('.actu-item').each(function(){
 // PARRALAX ANIM 
 $('[parallax-anim]').each(function(){
 	var distance = $(this).attr("parallax-anim")
-    var animEl = $(this).find("[direction]")
-    var speed = animEl.attr("scroll-speed")
-    var direction = animEl.attr("direction")
-    var type = animEl.attr("type-anim")
+    	var animEl = $(this).find("[direction]")
+   	var speed = animEl.attr("scroll-speed")
+    	var direction = animEl.attr("direction")
+    	var type = animEl.attr("type-anim")
     
-    if (type = "translation") {
-    	if (direction == 'horizontal'){    
-    		var tween = TweenMax.staggerFromTo(animEl, 1, 
-    		{xPercent: distance }, {xPercent: -distance});      
-    	} else if (direction =='vertical'){
-    		var tween = TweenMax.staggerFromTo(animEl, 1, 
-    		{yPercent: distance * speed }, {yPercent: -distance * speed});
-   	 	} else {} 
-    } else{}
+    	if (type = "translation") {
+    		if (direction == 'horizontal'){    
+    			var tween = TweenMax.staggerFromTo(animEl, 1, 
+    			{xPercent: distance }, {xPercent: -distance});      
+    		} else if (direction =='vertical'){
+    			var tween = TweenMax.staggerFromTo(animEl, 1, 
+    			{yPercent: distance * speed }, {yPercent: -distance * speed});
+   	 	} else {}
+    	} else {}
 
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this, 
-    	duration: getwindowWidth(2),
-    	triggerHook : 1,
-    	reverse : true,
-    	offset:0
+    		duration: getwindowWidth(2),
+    		triggerHook : 1,
+    		reverse : true,
+    		offset:0
   	}) 
-    .setTween(tween)
-    .addTo(controller)
+    	.setTween(tween)
+    	.addTo(controller)
 }) 
 
 // [reveal ANIM ] 
 $('[reveal-anim]').each(function(){
-		var hook = $(this).attr("reveal-anim")     
-		var scene = new ScrollMagic.Scene({
+	var hook = $(this).attr("reveal-anim")     
+	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    	triggerHook : hook,
-    	reverse : false,
-    	offset:0
+    		triggerHook : hook,
+    		reverse : false,
+    		offset:0
   	}) 
-    .setClassToggle(this, "visible") 
-		.addTo(controller)
+   	.setClassToggle(this, "visible") 
+	.addTo(controller)
 })
 
 
-}   // FIN FUNCTION
 					
