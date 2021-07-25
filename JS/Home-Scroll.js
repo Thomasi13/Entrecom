@@ -176,4 +176,5 @@ $('[reveal-anim]').each(function(){
 })
 
 
-					
+	
+}
