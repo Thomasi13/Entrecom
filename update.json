@@ -3,6 +3,6 @@
   "name": "Thomasi13",
   "repo": "Thomasi13/Entrecom",
   "files": {
-    "include": ["morris.css", "morris.js", "morris.min.js"]
+    "include": ["scrollMagic.js", "morris.js", "morris.min.js"]
   }
 }
