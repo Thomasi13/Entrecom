@@ -36,3 +36,4 @@ function animNavRs(){
   		t1.play()
 	})
 }
+
