@@ -109,6 +109,22 @@ $(".metier-list--text-wrapper").each(function(){
     	.addTo(controller)
 })
 
+$('.metier-list--title').mouseenter(function(){
+	var letter = $(this).find('.letter')
+  
+	var t1 = new TimelineMax({paused:true});
+  	t1.to(letter, 0.1,
+  	{skewX: "16deg", y:-100, x:20, stagger:0.05, ease: Power4.easeIn},0);
+      
+  	t1.to(letter, 0, 
+  	{y: 100, x:-20, opacity:0} ) 
+      
+  	t1.to (letter , 0.1 ,
+  	{skewX: "0deg", y:0, x:0, opacity:1, stagger:0.05 , ease: Power4.easeOut})
+    
+  	t1.play()
+})
+
 	
 /******************
      CREATION
@@ -126,6 +142,36 @@ $('.image-project').each(function(){
       		duration: $(window).innerWidth()*1.4
   	}) 
     	.setTween(tween)
+	.addTo(controller)
+})
+
+$(".project-item.link-box").each(function(){
+	var titleProject = $(this).find(".cach-title")
+  	var infoProject = $(this).find(".short-description-project")
+  	var cachImg = $(this).find(".cach-image")
+
+	var timeline = new TimelineMax();
+    
+    	var tween0 = TweenMax.from(titleProject,
+   	{ scaleX:1, duration:0.6, ease: Power3.easeOut});
+    
+    	var tween1 = TweenMax.from(infoProject,
+   	{ opacity:0, duration:0.8, ease: Power3.easeOut});
+      
+	var tween2 = TweenMax.from(cachImg,
+    	{scaleY:1, duration:0.6, ease: Power3.easeOut});
+      
+ 	timeline.
+    	add(tween0,0.2)
+    	.add(tween1,0.4)
+    	.add(tween2,0)
+
+	var scene = new ScrollMagic.Scene({
+		triggerElement: this, 
+		triggerHook : 0.9,
+		reverse : false,
+	})
+	.setTween(timeline)
 	.addTo(controller)
 })
 
@@ -251,52 +297,6 @@ $('.block-text.anim1').each(function(){
   	}) 
     	.setTween(timeline)
 	.addTo(controller)
-})
-
-$(".project-item.link-box").each(function(){
-	var titleProject = $(this).find(".cach-title")
-  	var infoProject = $(this).find(".short-description-project")
-  	var cachImg = $(this).find(".cach-image")
-
-	var timeline = new TimelineMax();
-    
-    	var tween0 = TweenMax.from(titleProject,
-   	{ scaleX:1, duration:0.6, ease: Power3.easeOut});
-    
-    	var tween1 = TweenMax.from(infoProject,
-   	{ opacity:0, duration:0.8, ease: Power3.easeOut});
-      
-	var tween2 = TweenMax.from(cachImg,
-    	{scaleY:1, duration:0.6, ease: Power3.easeOut});
-      
- 	timeline.
-    	add(tween0,0.2)
-    	.add(tween1,0.4)
-    	.add(tween2,0)
-
-	var scene = new ScrollMagic.Scene({
-		triggerElement: this, 
-		triggerHook : 0.9,
-		reverse : false,
-	})
-	.setTween(timeline)
-	.addTo(controller)
-})
-
-$('.metier-list--title').mouseenter(function(){
-	var letter = $(this).find('.letter')
-  
-	var t1 = new TimelineMax({paused:true});
-  	t1.to(letter, 0.1,
-  	{skewX: "16deg", y:-100, x:20, stagger:0.05, ease: Power4.easeIn},0);
-      
-  	t1.to(letter, 0, 
-  	{y: 100, x:-20, opacity:0} ) 
-      
-  	t1.to (letter , 0.1 ,
-  	{skewX: "0deg", y:0, x:0, opacity:1, stagger:0.05 , ease: Power4.easeOut})
-    
-  	t1.play()
 })
 	
 } //END SCROLLMAGIC FUNCTION
