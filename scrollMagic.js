@@ -1,5 +1,3 @@
-initScrollMagic()
-
 // SCROOOOLLL MAGIC //
 function initScrollMagic(){   
     var controller = new ScrollMagic.Controller({vertical: false });
