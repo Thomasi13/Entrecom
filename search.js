@@ -19,3 +19,20 @@ $('#search-btn').click(function(){
 		t1.reverse();
 	})
 })
+
+function animNavRs(){
+$(".rs-block.nav").mouseenter(function(){
+	var letter = $(this).find(".letter")
+  
+  var t1 = new TimelineMax({paused:true});
+		t1.fromTo(letter, 0.1,
+  	{skewX: "0deg", y:0, opacity:1},
+    {skewX: "16deg", y:-15, opacity:0, stagger:0.03, ease: Power4.easeIn},0);
+      
+  	t1.fromTo (letter , 0.1 ,
+    {skewX: "0deg", y:15, opacity:0},
+  	{skewX: "0deg", y:0, opacity:1, stagger:0.03 , ease: Power4.easeOut})
+    
+  t1.play()
+})
+}
