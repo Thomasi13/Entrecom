@@ -2,10 +2,11 @@
 // SCROOOOLLL MAGIC //
   
 var controller = new ScrollMagic.Controller({vertical: true });
+var header = $("header").innerHeight()
 var footer = $(".navbar").innerHeight()
 var windowHeight = window.innerHeight
 
-$('#intro-section').innerHeight(windowHeight - footer)
+$('#intro-section').innerHeight(windowHeight - footer - headerHeight)
 
 	
 // ADD CLASS ACTIVE TO SECTION
@@ -140,7 +141,7 @@ $('.image-project').each(function(){
   		triggerElement: this,
     		triggerHook : 1,
     		reverse : true,
-      		duration: $(window).innerWidth()*1.4
+      		duration: windowHeight*1.4
   	}) 
     	.setTween(tween)
 	.addTo(controller)
@@ -207,7 +208,7 @@ $('.actu-item').each(function(){
   		triggerElement: this,
     		triggerHook : 1,
     		reverse : true,
-      		duration: $(window).innerWidth()*1.4
+      		duration: windowHeight*1.4
   	}) 
     	.setClassToggle(this, "active") 
 	.addTo(controller)
@@ -235,7 +236,7 @@ $('[parallax-anim]').each(function(){
 
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this, 
-    		duration: getwindowWidth(2),
+    		duration: windowHeight*1.5,
     		triggerHook : 1,
     		reverse : true,
     		offset:0
