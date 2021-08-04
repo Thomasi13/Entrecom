@@ -1,6 +1,6 @@
 // SCROOOOLLL MAGIC //
-function initScrollMagic(){   
-    var controller = new ScrollMagic.Controller({vertical: false });
+  
+var controller = new ScrollMagic.Controller({vertical: false });
 
 function getwindowWidth(slow){
 	var windowWidth = window.innerWidth
