@@ -298,5 +298,4 @@ $('.block-text.anim1').each(function(){
     	.setTween(timeline)
 	.addTo(controller)
 })
-	
-} //END SCROLLMAGIC FUNCTION
+
