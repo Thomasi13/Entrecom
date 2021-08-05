@@ -6,7 +6,7 @@ var header = $("header").innerHeight()
 var footer = $(".navbar").innerHeight()
 var windowHeight = window.innerHeight
 
-$('#intro-section').innerHeight(windowHeight - footer - headerHeight)
+$('#intro-section').innerHeight(windowHeight - footer - header)
 
 	
 // ADD CLASS ACTIVE TO SECTION
