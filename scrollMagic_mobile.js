@@ -7,6 +7,7 @@ var footer = $(".navbar").innerHeight()
 var windowHeight = window.innerHeight
 
 
+
 $('#intro-section').innerHeight(windowHeight - footer - header)
 
 	
