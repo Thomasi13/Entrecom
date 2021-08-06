@@ -67,6 +67,7 @@ var scene = new ScrollMagic.Scene({
 // BLOCK IMG (CACH) 
 var tween = TweenMax.from("#verticale-img-block .cach-image",0.4,
 	{scaleY:"100%"},0);
+
 			  
 var scene = new ScrollMagic.Scene({
 	triggerElement: "#verticale-img-block",
