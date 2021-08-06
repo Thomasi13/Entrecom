@@ -286,7 +286,7 @@ $('.block-text.anim1').each(function(){
  	timeline
 	.add(tween0,0)
     	.add(tween3,0.3)
-    	.add(tween4,1)
+    	.add(tween4,0.5)
          
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
