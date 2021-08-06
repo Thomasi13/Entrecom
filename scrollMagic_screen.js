@@ -20,7 +20,7 @@ $('section').each(function(){
 	
     	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    		triggerHook : 1,
+    		triggerHook : 0,
         	duration: sectionWidth,
     		reverse : true,
     		offset:0
