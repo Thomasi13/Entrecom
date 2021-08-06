@@ -62,9 +62,11 @@ var scene = new ScrollMagic.Scene({
 .setTween(tween)
 .addTo(controller)
 
-// BLOCK IMG ACTIV 
+
+
+// BLOCK IMG (CACH) 
 var tween = TweenMax.from("#verticale-img-block .cach-image",0.4,
-	{yPercent:100%},0});
+	{scaleY:"100%"},0});
 			  
 var scene = new ScrollMagic.Scene({
 	triggerElement: "#verticale-img-block",
