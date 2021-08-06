@@ -267,7 +267,7 @@ $('.block-text.anim1').each(function(){
 	var paragraphIntro = $(this).find('.intro-paragraph--section');
     	var paragraph = $(this).find('.paragraph--section');
     	var rowSeparator = $(this).find('.separator');
-    	var titleBlockLetter = $(this).find('.letter');
+    	var titleBlockLetter = $(this).find('.title-section .letter');
     	var linkBlock = $(this).find('.link-block-area');
 
     
