@@ -207,6 +207,7 @@ $('.actu-item').each(function(){
     	.add(tween1,0)
     	.add(tween2,0.5)
     
+	
     	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
     		triggerHook : 1,
