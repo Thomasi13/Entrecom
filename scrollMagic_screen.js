@@ -275,15 +275,8 @@ $('.block-text.anim1').each(function(){
     
     	var tween0 = TweenMax.from(rowSeparator, 0.8,
    	{ scaleX:0, ease: Power3.easeOut});
-    
-    	var tween1 = TweenMax.from(paragraphIntro, 0.4,
-   	{ opacity:0, ease: Expo.easeIn});
-      
-	var tween2 = TweenMax.from(paragraph, 0.4,
-    	{opacity:0, ease: Expo.easeIn});
-	
-    
-    	var tween3 = TweenMax.from(titleBlockLetter, 0.3,
+        
+    	var tween3 = TweenMax.from(titleBlockLetter, 0.4,
     	{x:150, stagger:0.02, opacity:0, ease:Power2.easeOut});
     
      	var tween4 = TweenMax.from(linkBlock, 0.4,
@@ -292,8 +285,6 @@ $('.block-text.anim1').each(function(){
  	timeline
 	.add(tween0,0)
     	.add(tween3,0.3)
-    	/*.add(tween1,0.5)
-    	.add(tween2,0.7)*/
     	.add(tween4,1)
          
 	var scene = new ScrollMagic.Scene({
