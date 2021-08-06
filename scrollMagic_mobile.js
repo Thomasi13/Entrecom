@@ -128,6 +128,19 @@ $('.metier-list--title').mouseenter(function(){
   	t1.play()
 })
 
+
+// BLOCK IMG (CACH) 
+var tween = TweenMax.from("#verticale-img-block .cach-image",0.4,
+	{scaleY:"100%"},0});
+			  
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#verticale-img-block",
+	triggerHook : 0.9,
+	reverse:true
+})     
+.setTween(tween) 
+.addTo(controller)
+
 	
 /******************
      CREATION
@@ -155,10 +168,10 @@ $(".project-item.link-box").each(function(){
 
 	var timeline = new TimelineMax();
     
-    var tween0 = TweenMax.from(titleProject,
+   	 var tween0 = TweenMax.from(titleProject,
    	{ scaleX:1, duration:0.4, ease: Power3.easeOut});
     
-    var tween1 = TweenMax.from(infoProject,
+    	var tween1 = TweenMax.from(infoProject,
    	{ opacity:0, duration:0.4, ease: Power3.easeOut});
       
 	var tween2 = TweenMax.from(cachImg,
@@ -166,7 +179,7 @@ $(".project-item.link-box").each(function(){
       
  	timeline.
     	add(tween1,0.4)
-	   	.add(tween0,0.2)
+		.add(tween0,0.2)
     	.add(tween2,0)
 
 	var scene = new ScrollMagic.Scene({
