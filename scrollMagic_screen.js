@@ -291,8 +291,8 @@ $('.block-text.anim1').each(function(){
  	timeline
 	.add(tween0,0)
     	.add(tween3,0.3)
-    	.add(tween1,0.5)
-    	.add(tween2,0.7)
+    	/*.add(tween1,0.5)
+    	.add(tween2,0.7)*/
     	.add(tween4,1)
          
 	var scene = new ScrollMagic.Scene({
