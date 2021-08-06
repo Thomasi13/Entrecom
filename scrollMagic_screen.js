@@ -6,6 +6,16 @@ function getwindowWidth(slow){
 	var windowWidth = window.innerWidth
 	return (windowWidth * slow)
 }
+
+var tween = TweenMax.from('.navbar', 0.3, {translateY:"100%", ease:Power4.easeOut})
+tween.pause()
+
+var scene = new ScrollMagic.Scene({
+	triggerElement: "#agence-section",
+	triggerHook : 0.9
+})     
+.setTween(tween) 
+.addTo(controller)
 	
 // ADD CLASS ACTIVE TO SECTION
 $('section').each(function(){
