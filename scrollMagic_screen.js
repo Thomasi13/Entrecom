@@ -20,7 +20,7 @@ $('section').each(function(){
 	
     	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    		triggerHook : 0.55,
+    		triggerHook : 1,
         	duration: sectionWidth,
     		reverse : true,
     		offset:0
@@ -39,7 +39,7 @@ var tween = TweenMax.staggerFromTo("#block-image-intro img", 1,
 
 var scene = new ScrollMagic.Scene({
    triggerElement: '#block-image-intro', 
-   duration: '100%',
+   duration: $(window).innerWidth()*1.3,
    triggerHook : 1,
    reverse : true,
    offset:0
