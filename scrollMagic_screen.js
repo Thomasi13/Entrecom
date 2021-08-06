@@ -281,6 +281,7 @@ $('.block-text.anim1').each(function(){
       
 	var tween2 = TweenMax.from(paragraph, 0.4,
     	{opacity:0, ease: Expo.easeIn});
+	
     
     	var tween3 = TweenMax.from(titleBlockLetter, 0.3,
     	{x:150, stagger:0.02, opacity:0, ease:Power2.easeOut});
