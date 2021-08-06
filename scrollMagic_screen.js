@@ -33,13 +33,13 @@ $('section').each(function(){
     AGENCE
 *******************/
 // BLOCK IMAGE INTRO
-var tween = TweenMax.staggerFromTo("#block-image-intro", 1, 
-    {backgroundSize: "auto 160%"}, 
-    {backgroundSize:"auto 100%"});
+var tween = TweenMax.staggerFromTo("#block-image-intro img", 1, 
+    {scale: 1.3}, 
+    {scale: 1});
 
 var scene = new ScrollMagic.Scene({
    triggerElement: '#block-image-intro', 
-   duration: $(window).innerWidth()*1.5,
+   duration: '100%',
    triggerHook : 1,
    reverse : true,
    offset:0
