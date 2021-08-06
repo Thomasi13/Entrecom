@@ -6,30 +6,31 @@ var header = $("header").innerHeight()
 var footer = $(".navbar").innerHeight()
 var windowHeight = window.innerHeight
 
+
 $('#intro-section').innerHeight(windowHeight - footer - header)
 
 	
 // ADD CLASS ACTIVE TO SECTION
 $('section').each(function(){
-	var sectionWidth = $(this).innerWidth()
-    	var href = $(this).attr('id')
-    	var animEl = "[anchor="+href+"]"
-    	var scrollBar = "[anchor="+href+"] .scrollbar"
+	var sectionWidth = $(this).innerHeight()
+    var href = $(this).attr('id')
+    var animEl = "[anchor="+href+"]"
+    var scrollBar = "[anchor="+href+"] .scrollbar"
     
 
-    	var tween = TweenMax.staggerFromTo(scrollBar, 1, 
-    	{scaleX: 0 }, {scaleX: 1});
+    var tween = TweenMax.staggerFromTo(scrollBar, 1, 
+    {scaleX: 0 }, {scaleX: 1});
 	
-    	var scene = new ScrollMagic.Scene({
+    var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    		triggerHook : 0.55,
-        	duration: sectionWidth,
-    		reverse : true,
-    		offset:0
+    	triggerHook : 0.55,
+        duration: sectionWidth,
+    	reverse : true,
+    	offset:0
   	}) 
-    	.setClassToggle(animEl, "active")
-    	.setTween(tween)
-    	.addTo(controller)
+    .setClassToggle(animEl, "active")
+    .setTween(tween)
+    .addTo(controller)
 })
 
 
@@ -54,11 +55,12 @@ var scene = new ScrollMagic.Scene({
 
 
 /******************
-     VERTICALE
+     OFFRE
 *******************/
+
 // BLOCK WORDS ACTIV 
 var tween = TweenMax.staggerFromTo('.verticale-word', 1, 
-{xPercent: 75 },{xPercent: -75 }, 0.2);
+{xPercent: -75 },{xPercent: 75 }, 0.2);
 
 var scene = new ScrollMagic.Scene({
 	triggerElement: "#vertical-section-words",
@@ -70,9 +72,6 @@ var scene = new ScrollMagic.Scene({
 
 
 
-
-/** OFFRE **/
-
 $(".metier-list--dot").each(function(){
 	var tween = TweenMax.from(this, 1, 
 	{scale:0 , duration:200, ease:Power2.easeOut  });
@@ -80,8 +79,9 @@ $(".metier-list--dot").each(function(){
 	var scene = new ScrollMagic.Scene({
 		triggerElement: this,
 		triggerHook : 0.85,
-    reverse : false,
+    	reverse : false,
 	})
+	
 	.setTween(tween)
 	.addTo(controller)
 })
@@ -92,17 +92,17 @@ $(".metier-list--text-wrapper").each(function(){
 
 	var timeline = new TimelineMax();
     
-    	var tween0 = TweenMax.from(cachTitle,
+    var tween0 = TweenMax.from(cachTitle,
    	{ scaleX:1, duration:0.6, ease: Power3.easeOut});
     
-      var tween1 = TweenMax.from(number,
+    var tween1 = TweenMax.from(number,
    	{ opacity:0, duration:0.4, ease: Power3.easeOut});
       
  	timeline
     	.add(tween0,0)
     	.add(tween1,0.4)
     
-    	var scene = new ScrollMagic.Scene({
+    var scene = new ScrollMagic.Scene({
   		triggerElement: this, 
    		triggerHook : 0.90,
    		reverse : true,
@@ -111,18 +111,19 @@ $(".metier-list--text-wrapper").each(function(){
     	.addTo(controller)
 })
 
+
 $('.metier-list--title').mouseenter(function(){
 	var letter = $(this).find('.letter')
   
 	var t1 = new TimelineMax({paused:true});
   	t1.to(letter, 0.1,
-  	{skewX: "16deg", y:-100, x:20, stagger:0.05, ease: Power4.easeIn},0);
+  	{skewX: "16deg", y:-100, x:20, stagger:0.03, ease: Power4.easeIn},0);
       
   	t1.to(letter, 0, 
   	{y: 100, x:-20, opacity:0} ) 
       
   	t1.to (letter , 0.1 ,
-  	{skewX: "0deg", y:0, x:0, opacity:1, stagger:0.05 , ease: Power4.easeOut})
+  	{skewX: "0deg", y:0, x:0, opacity:1, stagger:0.03 , ease: Power4.easeOut})
     
   	t1.play()
 })
@@ -143,7 +144,7 @@ $('.image-project').each(function(){
     		reverse : true,
       		duration: windowHeight*1.4
   	}) 
-    	.setTween(tween)
+    .setTween(tween)
 	.addTo(controller)
 })
 
@@ -154,18 +155,18 @@ $(".project-item.link-box").each(function(){
 
 	var timeline = new TimelineMax();
     
-    	var tween0 = TweenMax.from(titleProject,
-   	{ scaleX:1, duration:0.6, ease: Power3.easeOut});
+    var tween0 = TweenMax.from(titleProject,
+   	{ scaleX:1, duration:0.4, ease: Power3.easeOut});
     
-    	var tween1 = TweenMax.from(infoProject,
-   	{ opacity:0, duration:0.8, ease: Power3.easeOut});
+    var tween1 = TweenMax.from(infoProject,
+   	{ opacity:0, duration:0.4, ease: Power3.easeOut});
       
 	var tween2 = TweenMax.from(cachImg,
     	{scaleY:1, duration:0.6, ease: Power3.easeOut});
       
  	timeline.
-    	add(tween0,0.2)
-    	.add(tween1,0.4)
+    	add(tween1,0.4)
+	   	.add(tween0,0.2)
     	.add(tween2,0)
 
 	var scene = new ScrollMagic.Scene({
@@ -179,13 +180,13 @@ $(".project-item.link-box").each(function(){
 
 
 /**********
-ACTU
+	ACTU
 ***********/
 
 $('.actu-item').each(function(){     
 	var date = $(this).find(".actus-date")
-    	var title = $(this).find(".cach-title")
-    	var paragraph = $(this).find(".actus-paragraph")
+    var title = $(this).find(".cach-title")
+    var paragraph = $(this).find(".actus-paragraph")
 
 	var timeline = new TimelineMax();
     
@@ -219,10 +220,10 @@ $('.actu-item').each(function(){
 // PARRALAX ANIM 
 $('[parallax-anim]').each(function(){
 	var distance = $(this).attr("parallax-anim")
-    	var animEl = $(this).find("[direction]")
+    var animEl = $(this).find("[direction]")
 	var speed = animEl.attr("scroll-speed")
-    	var direction = animEl.attr("direction")
-    	var type = animEl.attr("type-anim")
+    var direction = animEl.attr("direction")
+    var type = animEl.attr("type-anim")
     
     if (type = "translation") {
     	if (direction == 'horizontal'){    
@@ -236,13 +237,13 @@ $('[parallax-anim]').each(function(){
 
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this, 
-    		duration: windowHeight*1.5,
-    		triggerHook : 1,
-    		reverse : true,
-    		offset:0
+    	duration: windowHeight*1.5,
+    	triggerHook : 1,
+    	reverse : true,
+    	offset:0
   	}) 
-    	.setTween(tween)
-    	.addTo(controller)
+    .setTween(tween)
+    .addTo(controller)
 }) 
 
 // [reveal ANIM ] 
@@ -251,11 +252,11 @@ $('[reveal-anim]').each(function(){
 	
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    		triggerHook : hook,
-    		reverse : false,
-    		offset:0
+    	triggerHook : hook,
+    	reverse : false,
+    	offset:0
   	}) 
-    	.setClassToggle(this, "visible") 
+    .setClassToggle(this, "visible") 
 	.addTo(controller)
 })
 
@@ -270,13 +271,13 @@ $('.block-text.anim1').each(function(){
     
  	var timeline = new TimelineMax();
     
-    	var tween0 = TweenMax.from(rowSeparator, 0.8,
-   	{ scaleX:0, ease: Power3.easeOut});
+    	var tween0 = TweenMax.from(rowSeparator, 0.6,
+   		{ scaleX:0, ease: Power3.easeOut});
     
-    	var tween1 = TweenMax.from(paragraphIntro, 0.4,
-   	{ opacity:0, ease: Expo.easeIn});
+    	var tween1 = TweenMax.from(paragraphIntro, 0.3,
+   		{ opacity:0, ease: Expo.easeIn});
       
-	var tween2 = TweenMax.from(paragraph, 0.4,
+		var tween2 = TweenMax.from(paragraph, 0.3,
     	{opacity:0, ease: Expo.easeIn});
     
     	var tween3 = TweenMax.from(titleBlockLetter, 0.3,
@@ -288,8 +289,8 @@ $('.block-text.anim1').each(function(){
  	timeline
 	.add(tween0,0)
     	.add(tween3,0.3)
-    	.add(tween1,0.5)
-    	.add(tween2,0.7)
+    	.add(tween1,0.4)
+    	.add(tween2,0.55)
     	.add(tween4,1)
          
 	var scene = new ScrollMagic.Scene({
@@ -297,7 +298,7 @@ $('.block-text.anim1').each(function(){
     		triggerHook : 0.8,
     		reverse : false,
   	}) 
-    	.setTween(timeline)
+   	.setTween(timeline)
 	.addTo(controller)
 })
 
