@@ -277,8 +277,8 @@ $('.block-text.anim1').each(function(){
     	var tween0 = TweenMax.from(rowSeparator, 0.8,
    	{ scaleX:0, ease: Power3.easeOut});
         
-    	var tween1 = TweenMax.from(titleBlockLetter, 0.4,
-    	{x:150, stagger:0.02, opacity:0, ease:Power3.easeOut});
+    	var tween1 = TweenMax.from(titleBlockLetter, 0.5,
+    	{x:150, stagger:0.02, opacity:0, ease:Power2.easeOut});
     
      	var tween2 = TweenMax.from(linkBlock, 0.4,
     	{scale:0, ease: Power3.easeOut});
