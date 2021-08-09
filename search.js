@@ -1,5 +1,7 @@
 
 $('#search-btn').click(function(){
+	$(this).height($(window).innerHeight())
+	
 	var t1 = new TimelineMax({paused:true});
   	t1.to('#search-transition-block', 0,
   		{opacity: 1});
