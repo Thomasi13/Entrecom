@@ -135,7 +135,7 @@ $('.metier-list--title').mouseenter(function(){
 
 // BLOCK IMG (CACH) 
 var tween = TweenMax.from("#verticale-img-block .cach-image",0.5,
-	{scaleY:"100%"},0});
+	{scaleY:"100%"},0);
 			  
 var scene = new ScrollMagic.Scene({
 	triggerElement: "#verticale-img-block",
