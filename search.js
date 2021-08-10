@@ -1,6 +1,10 @@
 
 $('#search-btn').click(function(){
-	$('body').css("overflow-y","hidden")
+	$('body').css({
+		"overflow-y":"hidden",
+		"touch-action": "none",
+		"-ms-touch-action": "none",
+	})
 	var t1 = new TimelineMax({paused:true});
   	t1.to('#search-transition-block', 0,
   		{opacity: 1});
