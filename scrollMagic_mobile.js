@@ -6,7 +6,7 @@ var header = $("header").innerHeight()
 var footer = $(".navbar").innerHeight()
 
 function getwindowHeight(slow){
-	var windowheight = window.innerHeight
+	var windowHeight = window.innerHeight
 	return (windowHeight * slow)
 }
 
