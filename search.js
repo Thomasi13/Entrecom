@@ -1,4 +1,5 @@
 
+
 $('#search-btn').click(function(){
 	$('body').css({
 		"overflow-y":"hidden",
@@ -22,7 +23,11 @@ $('#search-btn').click(function(){
   
   	$("#exit-search").click(function(){
 		t1.reverse();
-		$('body').css("overflow-y","scroll")
+		$('body').css({
+			"overflow-y":"scroll",
+			"touch-action": "auto",
+			"-ms-touch-action": "auto",
+		})
 	})
 })
 
