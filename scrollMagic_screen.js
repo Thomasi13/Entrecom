@@ -21,7 +21,7 @@ $('section').each(function(){
     	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
     		triggerHook : 0.55,
-        	duration: sectionWidth,
+        	duration: getwindowWidth(1.4),
     		reverse : true,
     		offset:0
   	}) 
@@ -39,7 +39,7 @@ var tween = TweenMax.staggerFromTo("#block-image-intro", 1,
 
 var scene = new ScrollMagic.Scene({
    triggerElement: '#block-image-intro', 
-   duration: $(window).innerWidth()*1.5,
+   duration: getwindowWidth(1.5),
    triggerHook : 1,
    reverse : true,
    offset:0
@@ -57,7 +57,7 @@ var tween = TweenMax.staggerFromTo('.verticale-word', 1,
 var scene = new ScrollMagic.Scene({
 	triggerElement: "#vertical-section-words",
 	triggerHook : 1,
-  	duration : $(window).innerWidth()*1.5,
+  	duration : getwindowWidth(1.4)
 })
 .setTween(tween)
 .addTo(controller)
@@ -144,7 +144,7 @@ $('.image-project').each(function(){
   		triggerElement: this,
     		triggerHook : 1,
     		reverse : true,
-      		duration: $(window).innerWidth()*1.4
+      		duration: getwindowWidth(1.4)
   	}) 
     	.setTween(tween)
 	.addTo(controller)
@@ -212,7 +212,7 @@ $('.actu-item').each(function(){
   		triggerElement: this,
     		triggerHook : 1,
     		reverse : true,
-      		duration: $(window).innerWidth()*1.4
+      		duration: getwindowWidth(1.4)
   	}) 
     	.setClassToggle(this, "active") 
 	.addTo(controller)
