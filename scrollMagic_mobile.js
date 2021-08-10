@@ -12,7 +12,7 @@ function getwindowHeight(slow){
 
 
 
-$('#intro-section').innerHeight(windowHeight - footer - header)
+$('#intro-section').innerHeight(getwindowHeight(1) - footer - header)
 
 	
 // ADD CLASS ACTIVE TO SECTION
