@@ -8,7 +8,7 @@ function getwindowWidth(slow){
 }
 	
 // ADD CLASS ACTIVE TO SECTION
-$('section').each(function(){
+$('section:not(#intro-section)').each(function(){
 	var sectionWidth = $(this).width()
     	var href = $(this).attr('id')
     	var animEl = "[anchor="+href+"]"
