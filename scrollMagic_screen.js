@@ -58,8 +58,8 @@ var tween0 = TweenMax.fromTo("#block-title--metier",
 { width:'10vw', duration:0.4, ease: Power3.easeOut});
     
 var tween1 = TweenMax.fromTo("#subtitle-text",
-{ opacity:1, duration:0.4, ease: Power3.easeOut},
-{ width:0, duration:0.4, ease: Power3.easeOut});
+{ opacity:0, duration:0.4, ease: Power3.easeOut},
+{ opacity:1, duration:0.4, ease: Power3.easeOut});
 
 timeline
 .add(tween0,0)
@@ -312,8 +312,8 @@ $('.block-text.anim1').each(function(){
       
  	timeline
 	.add(tween1,0)
-    	.add(tween2,0.8)
-    	.add(tween3,0.4)
+    	.add(tween2,0.4)
+    	.add(tween3,0.2)
          
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
