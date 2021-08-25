@@ -201,7 +201,7 @@ $('.image-project').each(function(){
 	.addTo(controller)
 })
 
-$(".project-item.link-box").each(function(){
+$(".project-item.home-page").each(function(){
 	var titleProject = $(this).find(".cach-title")
   	var infoProject = $(this).find(".short-description-project")
   	var cachImg = $(this).find(".cach-image")
