@@ -67,7 +67,7 @@ timeline
 
 var scene = new ScrollMagic.Scene({
   		triggerElement: "#block-title--metier", 
-   		triggerHook : 0.80,
+   		triggerHook : 0.65,
    		reverse : true,
 })
 .setTween(timeline)
