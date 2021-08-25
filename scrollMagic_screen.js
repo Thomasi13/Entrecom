@@ -9,7 +9,7 @@ function getwindowWidth(slow){
 	
 // ADD CLASS ACTIVE TO SECTION
 $('section').each(function(){
-	var sectionWidth = $(this).innerWidth()
+	var sectionWidth = $(this).width()
     	var href = $(this).attr('id')
     	var animEl = "[anchor="+href+"]"
     	var scrollBar = "[anchor="+href+"] .scrollbar"
@@ -20,8 +20,8 @@ $('section').each(function(){
 	
     	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    		triggerHook : 0.55,
-        	duration: getwindowWidth(1.4),
+    		triggerHook : 0.50,
+        	duration: sectionWidth,
     		reverse : true,
     		offset:0
   	}) 
@@ -29,6 +29,7 @@ $('section').each(function(){
     	.setTween(tween)
     	.addTo(controller)
 })
+
 /******************
     AGENCE
 *******************/
@@ -47,9 +48,36 @@ var scene = new ScrollMagic.Scene({
 .setTween(tween)
 .addTo(controller)
 
+
+// NOS METIER
+var timeline = new TimelineMax();
+    
+var tween0 = TweenMax.fromTo("#block-title--metier",
+{ width:'35vw', duration:0.4, ease: Power3.easeOut},
+{ width:'10vw', duration:0.4, ease: Power3.easeOut});
+    
+var tween1 = TweenMax.fromTo("#subtitle-text",
+{ opacity:1, duration:0.4, ease: Power3.easeOut},
+{ width:0, duration:0.4, ease: Power3.easeOut});
+
+timeline
+.add(tween0,0)
+.add(tween1,0.4)
+
+var scene = new ScrollMagic.Scene({
+  		triggerElement: "#block-title--metier", 
+   		triggerHook : 0.80,
+   		reverse : true,
+})
+.setTween(timeline)
+.addTo(controller)
+
+
+
 /******************
-     VERTICALE
+     LES OFFRES
 *******************/
+
 // BLOCK WORDS ACTIV 
 var tween = TweenMax.staggerFromTo('.verticale-word', 1, 
 {yPercent: 75 },{yPercent: -75 }, 0.2);
@@ -265,32 +293,30 @@ $('[reveal-anim]').each(function(){
 
 
 $('.block-text.anim1').each(function(){ 	
-	var paragraphIntro = $(this).find('.intro-paragraph--section');
-    	var paragraph = $(this).find('.paragraph--section');
     	var rowSeparator = $(this).find('.separator');
     	var titleBlockLetter = $(this).find('.title-section .letter');
-    	var linkBlock = $(this).find('.link-block-area');
+    	var linkBlock = $(this).find('.link-wrapper');
 
     
  	var timeline = new TimelineMax();
-    
-    	var tween0 = TweenMax.from(rowSeparator, 0.8,
-   	{ scaleX:0, ease: Power3.easeOut});
         
-    	var tween3 = TweenMax.from(titleBlockLetter, 0.4,
-    	{x:150, stagger:0.02, opacity:0, ease:Power2.easeOut});
+    	var tween1 = TweenMax.from(titleBlockLetter, 0.4,
+    	{x:100, skewX:'-10deg', stagger:0.02, opacity:0, ease:Power2.easeOut});
+	
+	var tween2 = TweenMax.from(rowSeparator, 0.8,
+   	{ scaleX:0, ease: Power3.easeOut});
     
-     	var tween4 = TweenMax.from(linkBlock, 0.4,
+     	var tween3 = TweenMax.from(linkBlock, 0.4,
     	{scale:0, ease: Power3.easeOut});
       
  	timeline
-	.add(tween0,0)
-    	.add(tween3,0.3)
-    	.add(tween4,1)
+	.add(tween1,0)
+    	.add(tween2,0.8)
+    	.add(tween3,0.4)
          
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    		triggerHook : 0.8,
+    		triggerHook : 0.75,
     		reverse : false,
   	}) 
     	.setTween(timeline)
