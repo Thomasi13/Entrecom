@@ -32,6 +32,43 @@ $('section').each(function(){
 
 
 /******************
+    INTRO
+*******************/
+var timeline = new TimelineMax();
+    
+var tween1 = TweenMax.fromTo("header",
+{ y:'-100%', duration:0.3, ease: Power3.easeIn},
+{ y:'0%', duration:0.3, ease: Power3.easeOut});
+
+var tween2 = TweenMax.fromTo("header *",
+{ y:'-100%', opacity:0, duration:0.3, ease: Power3.easeIn},
+{ y:'0%', opacity:0, duration:0.3, ease: Power3.easeOut});
+    
+var tween3 = TweenMax.fromTo(".navbar",
+{ y:'100%', duration:0.4, ease: Power3.easeIn},
+{ y:'0%', duration:0.4, ease: Power3.easeOut});
+
+var tween4 = TweenMax.fromTo(".nav-link",
+{ y:'100%', opacity:0, duration:0.2, stagger: 0.1, ease: Power3.easeIn},
+{ y:'0%', opacity:1, duration:0.2, stagger: 0.1, ease: Power3.easeOut});
+
+
+timeline
+.add(tween1,0)
+.add(tween2,0.3)
+.add(tween3,0)
+.add(tween4,0.3)
+
+var scene = new ScrollMagic.Scene({
+  		triggerElement: "#agence-section", 
+   		triggerHook : 0.98,
+   		reverse : true,
+})
+.setTween(timeline)
+.addTo(controller)
+
+
+/******************
     AGENCE
 *******************/
 // BLOCK IMAGE INTRO
