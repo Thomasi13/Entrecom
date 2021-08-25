@@ -42,13 +42,9 @@ var tween1 = TweenMax.fromTo("header",
 
 var tween2 = TweenMax.fromTo("header *",
 { y:'-100%', opacity:0, duration:0.3, ease: Power3.easeIn},
-{ y:'0%', opacity:0, duration:0.3, ease: Power3.easeOut});
+{ y:'0%', opacity:1, duration:0.2, stagger:0.1, ease: Power3.easeOut});
     
-var tween3 = TweenMax.fromTo(".navbar",
-{ y:'100%', duration:0.4, ease: Power3.easeIn},
-{ y:'0%', duration:0.4, ease: Power3.easeOut});
-
-var tween4 = TweenMax.fromTo(".nav-link",
+var tween3 = TweenMax.fromTo(".nav-link",
 { y:'100%', opacity:0, duration:0.2, stagger: 0.1, ease: Power3.easeIn},
 { y:'0%', opacity:1, duration:0.2, stagger: 0.1, ease: Power3.easeOut});
 
@@ -57,7 +53,6 @@ timeline
 .add(tween1,0)
 .add(tween2,0.3)
 .add(tween3,0)
-.add(tween4,0.3)
 
 var scene = new ScrollMagic.Scene({
   		triggerElement: "#agence-section", 
@@ -71,27 +66,12 @@ var scene = new ScrollMagic.Scene({
 /******************
     AGENCE
 *******************/
-// BLOCK IMAGE INTRO
-var tween = TweenMax.staggerFromTo("#block-image-intro", 1, 
-    {backgroundSize: "auto 160%"}, 
-    {backgroundSize:"auto 100%"});
-
-var scene = new ScrollMagic.Scene({
-   triggerElement: '#block-image-intro', 
-   duration: getwindowWidth(1.5),
-   triggerHook : 1,
-   reverse : true,
-   offset:0
-})
-.setTween(tween)
-.addTo(controller)
-
 
 // NOS METIER
 var timeline = new TimelineMax();
     
 var tween0 = TweenMax.fromTo("#block-title--metier",
-{ width:'35vw', duration:0.4, ease: Power3.easeOut},
+{ width:'35vw', duration:0.4, ease: Power3.easeIn},
 { width:'10vw', duration:0.4, ease: Power3.easeOut});
     
 var tween1 = TweenMax.fromTo("#subtitle-text",
@@ -105,7 +85,7 @@ timeline
 var scene = new ScrollMagic.Scene({
   		triggerElement: "#block-title--metier", 
    		triggerHook : 0.65,
-   		reverse : true,
+   		reverse : false,
 })
 .setTween(timeline)
 .addTo(controller)
