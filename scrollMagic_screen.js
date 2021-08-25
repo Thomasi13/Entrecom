@@ -49,8 +49,8 @@ var tween4 = TweenMax.fromTo(".nav-link",
 { y:'0%', opacity:1, duration:0.2, stagger: 0.1, ease: Power3.easeOut});
 
 var tween5 = TweenMax.fromTo("#popup-wrapper",
-{ y:'-100%', opacity:0, duration:0.2, display:"grid", ease: Power3.easeOut},
-{ y:'0%', opacity:1, duration:0.2, display:"none", ease: Power3.easeOut});
+{ y:'-100%', opacity:1, duration:0.2, display:"grid", ease: Power3.easeOut},
+{ y:'0%', opacity:0, duration:0.2, display:"none", ease: Power3.easeOut});
 
 
 timeline
