@@ -39,6 +39,26 @@ $('section').each(function(){
 })
 
 
+/****
+SCROLLBAR INDICATOR
+****/
+var mainHeight =  - windowHeight 
+
+var tween = TweenMax.staggerFromTo("#scrollbar-mobile", 1, 
+    {scaleX: 0}, 
+    {scaleX: 1});
+
+var scene = new ScrollMagic.Scene({
+   triggerElement: '.main-wrapper', 
+   duration: $('.main-wrapper').innerHeight(),
+   triggerHook : 1,
+   reverse : true,
+   offset:0
+})
+.setTween(tween)
+.addTo(controller)
+
+
 /******************
     AGENCE
 *******************/
