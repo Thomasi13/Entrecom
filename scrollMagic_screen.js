@@ -49,15 +49,15 @@ var tween4 = TweenMax.fromTo(".nav-link",
 { y:'0%', opacity:1, duration:0.2, stagger: 0.1, ease: Power3.easeOut});
 
 var tween5 = TweenMax.fromTo("#popup-wrapper",
-{ y:'0%', opacity:1, duration:0.2, display:"grid", ease: Power3.easeOut},
-{ y:'100%', opacity:0, duration:0.2, display:"none", ease: Power3.easeOut});
+{ y:'0%', opacity:1, duration:0.3, display:"grid", ease: Power3.easeIn},
+{ y:'100%', opacity:0, duration:0.3, display:"none", ease: Power3.easeOut});
 
 
 timeline
 .add(tween1,0)
-.add(tween3,0.2)
 .add(tween4,0)
 .add(tween5,0)
+.add(tween3,0.2)
 
 var scene = new ScrollMagic.Scene({
   		triggerElement: "#agence-section", 
