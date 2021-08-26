@@ -279,43 +279,33 @@ $('[reveal-anim]').each(function(){
 
 
 $('.block-text.anim1').each(function(){ 	
-	var paragraphIntro = $(this).find('.intro-paragraph--section');
-    	var paragraph = $(this).find('.paragraph--section');
     	var rowSeparator = $(this).find('.separator');
-    	var titleBlockLetter = $(this).find('.letter');
-    	var linkBlock = $(this).find('.link-block-area');
+    	var titleBlockLetter = $(this).find('.title-section .letter');
+    	var linkBlock = $(this).find('.link-wrapper');
 
     
  	var timeline = new TimelineMax();
+        
+    	var tween1 = TweenMax.from(titleBlockLetter, 0.4,
+    	{x:100, skewX:'-10deg', stagger:0.02, opacity:0, ease:Power2.easeOut});
+	
+	var tween2 = TweenMax.from(rowSeparator, 0.8,
+   	{ scaleX:0, stagger: 0.2, ease: Power3.easeOut});
     
-    	var tween0 = TweenMax.from(rowSeparator, 0.6,
-   	{ scaleX:0, ease: Power3.easeOut});
-    
-    	var tween1 = TweenMax.from(paragraphIntro, 0.3,
-   	{ opacity:0, ease: Expo.easeIn});
-      
-		var tween2 = TweenMax.from(paragraph, 0.3,
-    {opacity:0, ease: Expo.easeIn});
-    
-    	var tween3 = TweenMax.from(titleBlockLetter, 0.3,
-    {x:150, stagger:0.02, opacity:0, ease:Power2.easeOut});
-    
-     	var tween4 = TweenMax.from(linkBlock, 0.4,
-    {scale:0, ease: Power3.easeOut});
+     	var tween3 = TweenMax.from(linkBlock, 0.4,
+    	{scale:0, ease: Power3.easeOut});
       
  	timeline
-	.add(tween0,0)
-    	.add(tween3,0.3)
-    	.add(tween1,0.4)
-    	.add(tween2,0.55)
-    	.add(tween4,1)
+	.add(tween1,0)
+    	.add(tween2,0.4)
+    	.add(tween3,0.2)
          
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
-    		triggerHook : 1,
+    		triggerHook : 0.75,
     		reverse : false,
   	}) 
-   	.setTween(timeline)
+    	.setTween(timeline)
 	.addTo(controller)
 })
 
