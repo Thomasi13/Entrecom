@@ -357,14 +357,14 @@ a {
 @media screen and ( min-width:992px) and (orientation:landscape){
   
   .nav:before{
-    background-color:#fff;
+    background-color:#fff !important;
   }
   .nav:hover{
-    color:#000;
+    color:#000 !important;
   }
   
   #darkM-btn:before{
-    background-color:#fff;
+    background-color:#fff !important;
   }
 
   #search-btn:before{
@@ -373,17 +373,16 @@ a {
 }
 
 
-
 .nav-link:not(.active):hover{
-  color:#000;
+  color:#000 !important;
 }
 
 .nav-link:before{
-  background-color:#000;
+  background-color:#000 !important;
 }
 
 .nav-link:after{
- 	background-color:#fff;
+ 	background-color:#fff !important;
 }
 
 
