@@ -354,6 +354,25 @@ a {
 }
 
 
+@media screen and ( min-width:992px) and (orientation:landscape){
+  
+  .nav:before{
+    background-color:#fff;
+  }
+  .nav:hover{
+    color:#000;
+  }
+  
+  #darkM-btn:before{
+    background-color:#fff;
+  }
+
+  #search-btn:before{
+    background-color:#6943f7 !important;
+  }
+}
+
+
 
 .nav-link:not(.active):hover{
   color:#000;
