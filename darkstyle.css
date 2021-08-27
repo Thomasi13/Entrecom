@@ -79,7 +79,7 @@ a {
 }
 
 .submit-btn-overlay.popup { /**/
-  background-color: #fff;
+  background-color: transparent;
   color: #6943f7;
 }
 
@@ -354,6 +354,18 @@ a {
 }
 
 
+
+.nav-link:not(.active):hover{
+  color:#000;
+}
+
+.nav-link:before{
+  background-color:#000;
+}
+
+.nav-link:after{
+ 	background-color:#fff;
+}
 
 
 
