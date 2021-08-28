@@ -107,7 +107,7 @@ a {
 
 .nav-link {
   border-color: #fff !important;
-  background-color: #fff !important;
+  background-color: #000 !important;
 }
 
 .block-img {
@@ -230,10 +230,6 @@ a {
   background-color: #000 !important;
 }
 
-.exit-page--icon { /**/
-  background-image: url('../images/arrow-left_P.svg');
-}
-
 .exit-page--text.f-18 { /**/
   color: #6943f7;
 }
@@ -297,14 +293,18 @@ a {
   color: #6943f7;
 }
 
+.metier-list--dot{
+background-color:#fff !important;
+}
+
 @media screen and (max-width: 991px) {
   
-  .block-text { /**/
-    border-color: #292928;
+  .block-text { 
+    border-color: #fff;
   }
 
   .verticale-item { 
-    border-color: #292928 !important;
+    border-color: #fff !important;
   }
 
   .project-item:nth-child(odd) {
