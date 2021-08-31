@@ -269,10 +269,10 @@ background-color:#fff !important;
 .submit-btn-wrapper:hover .submit-btn-overlay.home{
   color:#000 !important;
 }
-.submit-btn-wrapper submit-btn-overlay.home .arrow-default {
+.submit-btn-wrapper .submit-btn-overlay.home .arrow-default {
   fill:#fff !important;
 }
-.submit-btn-wrapper:hover submit-btn-overlay.home .arrow-hovered {
+.submit-btn-wrapper:hover .submit-btn-overlay.home .arrow-hovered {
   fill:#000 !important;
 }
 
