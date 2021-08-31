@@ -293,14 +293,20 @@ background-color:#fff !important;
 .submit-btn-wrapper.footer:hover .submit-btn-overlay.footer{
   fill:#fff !important;
 }
-.submit-btn-overlay.footer:before{
-  background-color:#000!important;
-}
 .submit-btn-overlay.home{
 border-color:#fff !important;
 }
+.submit-btn-overlay.home:before{
+  background-color:#fff!important;
+}
+.submit-btn-overlay.footer:before{
+  background-color:#000!important;
+}
 .submit-btn-wrapper.footer:hover .submit-btn-overlay.home{
-color:#fff !important;
+color:#000 !important;
+}
+.submit-btn-wrapper.footer:hover .submit-btn-overlay.home .arrow-group .arrow-hovered{
+fill:#000 !important;
 }
 
 
