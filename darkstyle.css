@@ -389,6 +389,14 @@ background-color:#fff !important;
 #icon-search path{
   fill:#fff !important;
 }
+#dark-icon circle{
+  fill:#000 !important;
+  stroke:#fff ! important;
+}
+#dark-icon path{
+  fill:#fff !important;
+  stroke:#fff !important;
+}
 
 
 
