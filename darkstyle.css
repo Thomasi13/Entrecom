@@ -1,6 +1,6 @@
 
 body {
-  color: #fff;
+  color: red;
   background-color:#000 !important
 }
 
@@ -68,9 +68,9 @@ a {
   color: #fff !important;
   border-color:#fff !important;
 }
+
 .submit-btn-overlay.footer {
   border-color: #000 !important;
-  background-color: #fff !important;
   color: #000 !important;
 }
 
