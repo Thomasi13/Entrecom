@@ -30,26 +30,6 @@ a {
   color: #fff !important;
 }
 
-.f-13.email-input.discut.footer {
-  border-color: #000 !important;
-  color: #000 !important;
-}
-
-.f-13.email-input.discut.footer::-webkit-input-placeholder {
-  color: #000 !important;
-}
-
-.f-13.email-input.discut.footer:-ms-input-placeholder {
-  color: #000 !important;
-}
-
-.f-13.email-input.discut.footer::-ms-input-placeholder {
-  color: #000 !important;
-}
-
-.f-13.email-input.discut.footer::placeholder {
-  color: #000 !important;
-}
 
 .header {
   border-color:#fff !important;
@@ -71,11 +51,6 @@ a {
 .submit-btn-overlay { 
   color: #fff !important;
   border-color:#fff !important;
-}
-
-.submit-btn-overlay.footer {
-  border-color: #000 !important;
-  color: #000 !important;
 }
 
 .text-purple {
@@ -284,32 +259,21 @@ background-color:#fff !important;
 }
 
 
-
+/* HOME FORM FOOTER */
 .submit-btn-overlay.home{
   border-color:#fff !important;
 }
 .submit-btn-overlay.home:before{
   background-color:#fff!important;
 }
-.submit-btn-overlay.footer:before{
-  background-color:#000!important;
-}
-
-.submit-btn-wrapper.footer:hover .submit-btn-overlay.home{
+.submit-btn-wrapper:hover .submit-btn-overlay.home{
   color:#000 !important;
 }
-.submit-btn-wrapper.footer:hover .submit-btn-overlay.footer{
-  color:#fff !important;
+.submit-btn-wrapper submit-btn-overlay.home .arrow-default {
+  fill:#fff !important;
 }
-.submit-btn-overlay.footer .arrow-group .arrow-default {
+.submit-btn-wrapper:hover submit-btn-overlay.home .arrow-hovered {
   fill:#000 !important;
-}
-
-.submit-btn-wrapper.footer:hover .submit-btn-overlay.home .arrow-group .arrow-hovered{
-fill:#000 !important;
-}
-.submit-btn-wrapper.footer.home:hover .submit-btn-overlay.footer .arrow-group .arrow-hovered{
-fill:#fff !important;
 }
 
 .hamburger .hamburger-inner,
