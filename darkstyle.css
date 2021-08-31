@@ -287,11 +287,13 @@ background-color:#fff !important;
 .link-block--more:hover .icon-group .icon-group--default{
   fill:#fff !important;
 }
+
+
 .submit-btn-overlay.footer .arrow-group .arrow-default{
   fill:#000 !important;
 }
 .submit-btn-wrapper.footer:hover .submit-btn-overlay.footer{
-  fill:#fff !important;
+  color:#fff !important;
 }
 .submit-btn-overlay.home{
 border-color:#fff !important;
@@ -307,6 +309,9 @@ color:#000 !important;
 }
 .submit-btn-wrapper.footer:hover .submit-btn-overlay.home .arrow-group .arrow-hovered{
 fill:#000 !important;
+}
+.submit-btn-wrapper:hover .submit-btn-overlay.footer .arrow-group .arrow-hovered{
+fill:#fff !important;
 }
 
 
