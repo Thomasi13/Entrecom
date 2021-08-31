@@ -1,11 +1,7 @@
 
 
 $('#search-btn').click(function(){
-	$('body').css({
-		"overflow-y":"hidden",
-		"touch-action": "none",
-		"-ms-touch-action": "none",
-	})
+	
 	var t1 = new TimelineMax({paused:true});
   	t1.to('#search-transition-block', 0,
   		{opacity: 1});
@@ -23,28 +19,6 @@ $('#search-btn').click(function(){
   
   	$("#exit-search").click(function(){
 		t1.reverse();
-		$('body').css({
-			"overflow-y":"scroll",
-			"touch-action": "auto",
-			"-ms-touch-action": "auto",
-		})
 	})
 })
-
-function animNavRs(){
-	$(".rs-block.nav").mouseenter(function(){
-		var letter = $(this).find(".letter")
-  
-  		var t1 = new TimelineMax({paused:true});
-		t1.fromTo(letter, 0.1,
-  		{skewX: "0deg", y:0, opacity:1},
-    		{skewX: "16deg", y:-15, opacity:0, stagger:0.03, ease: Power4.easeIn},0);
-      
-  		t1.fromTo (letter , 0.1 ,
-    		{skewX: "0deg", y:15, opacity:0},
-  		{skewX: "0deg", y:0, opacity:1, stagger:0.03 , ease: Power4.easeOut})
-    
-  		t1.play()
-	})
-}
 
