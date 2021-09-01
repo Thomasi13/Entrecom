@@ -189,7 +189,7 @@ $('.metier-list--title').mouseenter(function(){
 	
 $('.image-project').each(function(){ 
 	var tween = TweenMax.staggerFromTo(this, 1, 
-	{xPercent: 15, scale:1.3}, {xPercent: -15, scale:1.3});
+	{x: "15%"}, {x: "-15%"});
 
 	var scene = new ScrollMagic.Scene({
   		triggerElement: this,
@@ -224,7 +224,7 @@ $(".project-item.home-page").each(function(){
 
 	var scene = new ScrollMagic.Scene({
 		triggerElement: this, 
-		triggerHook : 0.9,
+		triggerHook : 0.80,
 		reverse : false,
 	})
 	.setTween(timeline)
