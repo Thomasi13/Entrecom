@@ -51,6 +51,9 @@ a {
   color: #fff !important;
   border-color:#fff !important;
 }
+.submit-btn-overlay.footer { 
+  color: #000 !important;
+}
 
 .text-purple {
   color: #6943f7 !important;
