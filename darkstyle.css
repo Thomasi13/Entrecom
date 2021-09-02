@@ -35,10 +35,6 @@ a {
   border-color:#fff !important;
   background-color: #000 !important;
 }
-.header.search-page{
-  background-color:transparent !important;
-  border-color:#000 !important;
-}
 
 .section {
   border-color: #fff !important;
@@ -107,16 +103,8 @@ a {
   border-right-color: #fff !important;
 }
 
-.project-item.search-page.result{
-  border-color:#000 !important
-}
-
 .actu-item {
   border-color: #fff;
-}
-
-.actus-date { /**/
-  color: #6943f7;
 }
 
 .equipe-slider {
@@ -186,10 +174,6 @@ background-color:#fff !important;
 
   .project-item.link-box {
     border-color: #fff !important;
-  }
-
-  .project-item.search-page {
-    color: #fff !important;
   }
 }
 
@@ -280,10 +264,6 @@ background-color:#fff !important;
 .hamburger .hamburger-inner::before,
 .hamburger .hamburger-inner::after {
   background-color: #fff !important; 
-}
-
-#exit-search{
-border-color:#000 !important;
 }
 
 #discut-section{
