@@ -19,10 +19,7 @@ $('#intro-section, .scroll-section').innerHeight(getwindowHeight(1) - footer - h
 $('section').each(function(){
     var sectionWidth = $(this).innerHeight()
     var href = $(this).attr('id')
-    var animEl = "[anchor="+href+"]"
-    var scrollBar = "[anchor="+href+"] .scrollbar"
     
-
     var tween = TweenMax.staggerFromTo(scrollBar, 1, 
     {scaleX: 0 }, {scaleX: 1});
 	
@@ -33,7 +30,6 @@ $('section').each(function(){
     	reverse : true,
     	offset:0
   	}) 
-    .setClassToggle(animEl, "active")
     .setTween(tween)
     .addTo(controller)
 })
