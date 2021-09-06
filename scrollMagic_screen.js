@@ -218,52 +218,6 @@ $('.actu-item').each(function(){
 	.addTo(controller)
 })
 
-
-
-// PARRALAX ANIM 
-$('[parallax-anim]').each(function(){
-	var distance = $(this).attr("parallax-anim")
-    	var animEl = $(this).find("[direction]")
-	var speed = animEl.attr("scroll-speed")
-    	var direction = animEl.attr("direction")
-    	var type = animEl.attr("type-anim")
-    
-    if (type = "translation") {
-    	if (direction == 'horizontal'){    
-    		var tween = TweenMax.staggerFromTo(animEl, 1, 
-    		{xPercent: distance }, {xPercent: -distance});      
-    	} else if (direction =='vertical'){
-    		var tween = TweenMax.staggerFromTo(animEl, 1, 
-    		{yPercent: distance * speed }, {yPercent: -distance * speed});
-   	 } else {} 
-    } else{}
-
-	var scene = new ScrollMagic.Scene({
-  		triggerElement: this, 
-    		duration: getwindowWidth(2),
-    		triggerHook : 1,
-    		reverse : true,
-    		offset:0
-  	}) 
-    	.setTween(tween)
-    	.addTo(controller)
-}) 
-
-// [reveal ANIM ] 
-$('[reveal-anim]').each(function(){
-	var hook = $(this).attr("reveal-anim")
-	
-	var scene = new ScrollMagic.Scene({
-  		triggerElement: this,
-    		triggerHook : hook,
-    		reverse : false,
-    		offset:0
-  	}) 
-    	.setClassToggle(this, "visible") 
-	.addTo(controller)
-})
-
-
 $('.block-text.anim1').each(function(){ 	
 	var paragraphIntro = $(this).find('.intro-paragraph--section');
     	var paragraph = $(this).find('.paragraph--section');
