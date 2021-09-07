@@ -6,6 +6,46 @@ function getwindowWidth(slow){
 	var windowWidth = window.innerWidth
 	return (windowWidth * slow)
 }
+
+
+
+/******************
+    INTRO
+*******************/
+var timeline = new TimelineMax();
+    
+var tween1 = TweenMax.fromTo("header",
+{ y:'-100%', duration:0.3, ease: Power3.easeIn},
+{ y:'0%', duration:0.3, ease: Power3.easeOut});
+
+var tween3 = TweenMax.fromTo("#logo, .rs-block.nav, .btn-nav--icon",
+{ y:'-100%', opacity:0, duration:0.2, ease: Power3.easeOut},
+{ y:'0%', opacity:1, duration:0.2, stagger:0.1, ease: Power3.easeOut});
+    
+var tween4 = TweenMax.fromTo(".nav-link",
+{ y:'100%', opacity:0, duration:0.2, stagger: 0.1, ease: Power3.easeOut},
+{ y:'0%', opacity:1, duration:0.2, stagger: 0.1, ease: Power3.easeOut});
+
+var tween5 = TweenMax.fromTo("#popup-wrapper",
+{ y:'0%', opacity:1, duration:0.3, display:"grid", ease: Power3.easeIn},
+{ y:'100%', opacity:0, duration:0.3, display:"none", ease: Power3.easeOut});
+
+
+timeline
+.add(tween1,0)
+.add(tween4,0)
+.add(tween5,0)
+.add(tween3,0.2)
+
+var scene = new ScrollMagic.Scene({
+  		triggerElement: "#agence-section", 
+   		triggerHook : 0.98,
+   		reverse : true,
+})
+.setTween(timeline)
+.addTo(controller)
+
+
 	
 // ADD CLASS ACTIVE TO SECTION
 $('section').each(function(){
