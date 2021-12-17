@@ -168,6 +168,10 @@ background-color:#fff !important;
 border-color:white;
 }
 
+.names-wrapper.offres-pages{
+border-color:white;
+}
+
 @media screen and (max-width: 991px) {
   
   .block-text { 
