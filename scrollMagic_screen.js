@@ -34,17 +34,6 @@ introAnim.fromTo("#popup-wrapper",
 	{ y:'100%', opacity:0, duration:0.3, display:"none", ease: Power3.easeOut},0);
 
 
-
-
-var scene = new ScrollMagic.Scene({
-  		triggerElement: "#agence-section", 
-   		triggerHook : 0.98,
-   		reverse : true,
-})
-.setTween(timeline)
-.addTo(controller)
-
-
 	
 // ADD CLASS ACTIVE TO SECTION
 $('section').each(function(){
