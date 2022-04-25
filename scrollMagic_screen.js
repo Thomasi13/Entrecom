@@ -178,6 +178,7 @@ $('.image-project').each(function(){
 	.addTo(controller)
 })
 
+
 $(".project-item.home-page").each(function(){
 	var titleProject = $(this).find(".cach-title")
   	var infoProject = $(this).find(".short-description-project")
